@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demon Slayer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <div class="logo">Demon Slayer</div>
+        <ul class="nav-links">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Jeu</a></li>
+            <li><a href="#">Introduction</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteneur principal -->
+    <div class="container" id="formContainer">
+        <h1>Rejoignez l'aventure Demon Slayer</h1>
+        <form id="form">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" required>
+    
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <label for="age">Âge</label>
+            <input type="number" id="age" name="age" required>
+    
+            <button type="submit" id="submit">Envoyer</button>
+        </form>
+
+        <section class="story" id="story">
+            <h1>Votre mission commence maintenant !</h1>
+            <p>
+                Votre sœur a été transformée en démon par une terrible malédiction. 
+                En tant que jeune Demon Slayer, votre mission est de la sauver et de la rendre humaine. <br>
+                Pour y parvenir, vous devrez traverser de nombreux défis, affronter des démons redoutables, 
+                et retrouver le démon responsable de cette tragédie. <br>
+                Votre lame est votre seul espoir. Êtes-vous prêt à relever le défi et à ramener votre sœur à la lumière ?
+            </p>
+        </section>
+        
+    </div>
+
+    <!-- Choix du sabre -->
+    <div class="new-container-1" id="newContainer1" style="display: none;">
+        <h2>Bienvenue, <span id="userName"></span></h2>
+        <p>Vous êtes prêt à commencer votre aventure en tant que Demon Slayer. Choisissez l'une des options ci-dessous pour débuter :<br>
+            Option 1 : Sabre 1. <br>
+            Option 2 : Sabre 2.</p>
+        
+        <!-- Image -->
+        <img src="images/sabre.jpg" alt="Demon Slayer" style="width: 100%; max-width: 500px; margin-bottom: 20px;">
+        
+        <!-- Boutons -->
+            <button id="sabreOption1" class="option-button">Choisir Sabre 1</button>
+            <button id="sabreOption2" class="option-button">Choisir Sabre 2</button>
+    </div>
+
+    <!-- Choix du chemin -->
+    <div class="new-container-2" id="newContainer2" style="display: none;">
+        <h2>Maintenant, <span id="userName2"></span> !</h2>
+        <p>Choisissez votre chemin :<br>
+            Option 1 : Vous passez par la montagne.<br>
+            Option 2 : Vous passez par la forêt.</p>
+        
+        <img src="images/chemin.jpg" alt="Demon Slayer" style="width: 100%; max-width: 500px; margin-bottom: 20px;">
+        
+            <button id="pathOption1" class="option-button">Passer par la montagne</button>
+            <button id="pathOption2" class="option-button">Passer par la forêt</button>
+    </div>
+
+    <!-- Affrontement avec le démon gardien -->
+    <div class="new-container-3" id="newContainer3" style="display: none;">
+        <h2>Le Démon Gardien</h2>
+        
+        <p>Vous êtes arrivé à la montagne. Le démon gardien bloque votre chemin. Vous devez le vaincre.</p>
+        <img src="images/demon.jpg" alt="Demon Slayer" style="width: 100%; max-width: 500px; margin-bottom: 20px;">
+            <button id="SorcierOption" class="option-button">Coup Fatal</button>
+    </div>
+
+    <!-- Affrontement avec l'araignée géante -->
+    <div class="new-container-4" id="newContainer4" style="display: none;">
+        <h2>L'Araignée Géante</h2>
+        <p>Dans la forêt, vous rencontrez une araignée géante. Vous devez la vaincre pour avancer.</p>
+        <img src="images/arg.jpg" alt="Demon Slayer" style="width: 100%; max-width: 500px; margin-bottom: 20px;">
+            <button id="ArgOption" class="option-button">Coup Fatal</button>
+    </div>
+
+    <!-- Rencontre avec le sorcier -->
+    <div class="new-container-5" id="newContainer5" style="display: none;">
+        <h2>La Rencontre avec le Sorcier</h2>
+        <p>Le sorcier accepte de vous aider, mais il veut un œil d'araignée ou un cœur de démon en échange.</p>
+        <img src="iamges/magicien.jpg" alt="Demon Slayer" style="width: 100%; max-width: 500px; margin-bottom: 20px;">
+            <button id="PorteOption" class="option-button">Se téléporter</button>
+    </div>
+
+    <!-- La porte magique -->
+    <div class="new-container-6" id="newContainer6" style="display: none;">
+        <h2>La Porte Magique</h2>
+        <p>Vous êtes face à une porte magique. Résolvez l'énigme pour l'ouvrir.</p>
+        <p>Qu'est-ce qui n'est pas vivant mais qui grandit, n'a pas de poumon mais a besoin d'air, et meurt sous l'eau ?</p>
+        <img src="iamges/porte magic.jpg" alt="Demon Slayer" style="width: 100%; max-width: 500px; margin-bottom: 20px;">
+        <input type="text" id="enigmeAnswer" placeholder="Entrez votre réponse">
+        <button id="checkAnswer" class="option-button">Vérifier la réponse</button>
+    </div>
+
+
+    <!-- Le démon responsable de la malédiction -->
+    <div class="new-container-7" id="newContainer7" style="display: none;">
+        <h2>Le Combat Final</h2>
+        <p>Vous faites face au démon responsable de la malédiction. Vous devez le combattre pour sauver votre sœur.</p>
+        <img src="demon boss.jpg" alt="Demon Slayer" style="width: 100%; max-width: 500px; margin-bottom: 20px;">
+            <button id="FinOption" class="option-button">Souffle du Soleil</button>
+    </div>
+
+    <!-- Victoire -->
+    <div class="new-container-8" id="newContainer8" style="display: none;">
+        <h2>Victoire</h2>
+        <p>Vous avez vaincu le démon et brisé la malédiction. Votre sœur est sauvée !</p>
+        <img src="images/victoire.jpg" alt="Demon Slayer" style="width: 100%; max-width: 500px; margin-bottom: 20px;">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Demon Slayer Game. Projet</p>
+        <ul>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </footer>
+
+    <script src="java/java.js"></script>
+</body>
+</html>
